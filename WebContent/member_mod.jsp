@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %> 
+
 <%
-	request.setCharacterEncoding("UTF-8");
-	response.setContentType("text/html; charset=UTF-8");
-	
-	String id = request.getParameter("id");
-	String pw = request.getParameter("pw");
-	String email = request.getParameter("email");
-	String tel = request.getParameter("tel");
-	String name = request.getParameter("name");
-	String address = request.getParameter("address");
-	
 	String driver = "org.postgresql.Driver";
 	String url = "jdbc:postgresql://localhost/pro01";
 	String user = "postgres";
@@ -19,10 +10,14 @@
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
+	ResultSet rs = null;
 	String sql = "";
 	String wid = (String) session.getAttribute("id");
 	String wpw = "";
 	String wname = "";
+	String tel = "";
+	String email = "";
+	String address = "";
 	try {
 		Class.forName(driver);
 		try {
@@ -130,37 +125,58 @@
                 </div>
             </figure>
             <section class="page" id="page1">
-                <h2 class="page_tit">MY PAGE</h2>
+                <h2 class="page_tit">회원가입</h2>
                 <div class="page_wrap">
-					<table class="table">
-						<tbody>
-							<tr>
-								<th>아이디</th><td><%=wid %></td>
-							</tr>
-							<tr>
-								<th>비밀번호</th><td><%=wpw %></td>
-							</tr>
-							<tr>
-								<th>이름</th><td><%=wname %></td>
-							</tr>
-							<tr>
-								<th>전화번호</th><td><%=tel %></td>
-							</tr>
-							<tr>
-								<th>이메일</th><td><%=email %></td>
-							</tr>
-							<tr>
-								<th>주소</th><td><%=addr %></td>
-							</tr>
-							<tr>
-								<td colspan="2">
-									<a href="member_mod.jsp?id=<%=wid %>" class="btn btn-primary">정보 수정</a> &nbsp; &nbsp; &nbsp; &nbsp;
-									<a href="member_del.jsp?id=<%=wid %>" class="btn btn-cancle">회원탈퇴</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
+                    <form name="modify_form" id="modify_form" action="member_modify_pro.jsp" method="post" onsubmit="return form_check(this)">
+						<table class="table">
+							<tbody>
+								<tr>
+									<th><label for="id" class="lb">아이디</label></th>
+									<td>
+										<input type="text" name="id" id="id" class="indata" value="<%=wid %>" readonly">
+									</td>
+								</tr>
+								<tr>
+									<th><label for="pw" class="lb">비밀번호</label></th>
+									<td><input type="password" name="pw" id="pw" class="indata" pattern="^[A-Za-z\d$!%*#?&]{4,8}$" value="<%=wpw %>" required></td>
+								</tr>
+								<tr>
+									<th><label for="pw2" class="lb">비밀번호 확인</label></th>
+									<td><input type="password" name="pw2" id="pw2" class="indata" pattern="^[A-Za-z\d$!%*#?&]{4,8}$" required></td>
+								</tr>
+								<tr>
+									<th><label for="name" class="lb">이름</label></th>
+									<td><input type="text" name="name" id="name" pattern="^[가-힣A-Za-z]{2,12}$" class="indata" value="<%=wname %>" required></td>
+								</tr>
+								<tr>
+									<th><label for="tel" class="lb">전화번호</label></th>
+									<td><input type="tel" name="tel" id="tel" maxlength="13" value="<%=tel %>" class="indata"></td>
+								</tr>
+								<tr>
+									<th><label for="email" class="lb">이메일</label></th>
+									<td><input type="email" name="email" id="email" value="<%=email %>" class="indata"></td>
+								</tr>
+								<tr>
+									<th><label for="email" class="lb">주소</label></th>
+									<td><input type="text" name="addr" id="addr" value="<%=addr %>" class="indata"></td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<input type="submit" value="회원정보수정" class="btn btn-primary"> &nbsp; &nbsp; &nbsp; &nbsp;
+										<a href="mypage.jsp?id=<%=wid %>" class="btn btn-primary">마이 페이지</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+                    </form>
+                    <script>
+                    function form_check(f){
+                    	if(f.pw.value!=f.pw2.value){
+                    		alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+                    		return false;
+                    	}
+                    }
+                    </script>
                 </div>
             </section>
         </div>
