@@ -28,12 +28,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="sub_common.css">
-    <!-- 오픈그래프 설정 -->
-    <meta name="og:site_name" content="사이트이름">
-    <meta name="og:title" content="포트폴리오 - CJ프레시웨이">
-    <meta name="og:description" content="CJ프레시웨이는 좋은 식자재를 유통하며, 건강하고 맛있는 식문화를 창출하는 대한민국 최고의 글로벌 식자재 유통 및 푸드서비스 전문 기업입니다.">
-    <meta name="og:url" content="https://okgunyang.github.io/web1">
-    <meta name="og:image" content="images/thumbnail.jpg">  
           
     <!-- 기본 폰트 및 초기화 로딩 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
