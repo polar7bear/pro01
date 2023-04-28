@@ -158,7 +158,7 @@
 								</tr>
 								<tr>
 									<th><label for="email" class="lb">주소</label></th>
-									<td><input type="text" name="addr" id="addr" value="<%=addr %>" class="indata"></td>
+									<td><input type="text" name="addr" id="addr" value="<%=address %>" class="indata"></td>
 								</tr>
 								<tr>
 									<td colspan="2">
