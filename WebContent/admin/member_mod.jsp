@@ -3,6 +3,7 @@
 <%@ page import="java.sql.*" %> 
 
 <%
+	String path = request.getContextPath();
 	String driver = "org.postgresql.Driver";
 	String url = "jdbc:postgresql://localhost/pro01";
 	String user = "postgres";
@@ -62,7 +63,7 @@
     ">
     <meta name="author" content="soncole">
 
-    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="shortcut icon" href="<%=path %>//images/favicon.ico">
 
     <meta name="og:site_name" content="사이트이름">
     <meta name="og:title" content="포트폴리오 - 인성정보">
@@ -72,8 +73,8 @@
           
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="sub_common.css">
+    <link rel="stylesheet" href="<%=path %>/common.css">
+    <link rel="stylesheet" href="<%=path %>/sub_common.css">
           
     <!-- 기본 폰트 및 초기화 로딩 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +83,7 @@
     <!-- 스타일 초기화 -->
     <!-- reset.css나 normalize.css를 CDN 또는 다운로드 받아 link로 연결 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="<%=path %>/common.css">
     <link rel="stylesheet" href="main.css">
 <style>
     .vs { height:40vh; }
@@ -117,7 +118,7 @@
 </head>
 <body>
     <div class="container">
-		<%@ include file="./header.jsp" %>
+		<%@ include file="./admin_header.jsp" %>
         <div class="content">
             <figure class="vs">
                 <div class="img_box">
@@ -163,7 +164,7 @@
 								<tr>
 									<td colspan="2">
 										<input type="submit" value="회원정보수정" class="btn btn-primary"> &nbsp; &nbsp; &nbsp; &nbsp;
-										<a href="mypage.jsp?id=<%=wid %>" class="btn btn-primary">마이 페이지</a>
+										<a href="<%=path %>/admin/member_manage.jsp" class="btn btn-primary">마이 페이지</a>
 									</td>
 								</tr>
 							</tbody>
@@ -180,7 +181,7 @@
                 </div>
             </section>
         </div>
-        <%@ include file="./footer.jsp" %>
+        <%@ include file="../footer.jsp" %>
     </div>
 </body>
 </html>
