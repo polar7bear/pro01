@@ -39,7 +39,7 @@
 	    <div class="main">
 	        <div class="main_wrap">
 	            <a href="index.jsp" class="logo">
-	                <img src="./images/logo.png" alt="인성정보로고">
+	                <img src="<%=path1 %>/images/logo.png" alt="인성정보로고">
 	            </a>
 	            <nav class="gnb">
 	                <ul class="gnb_fr">

@@ -79,20 +79,20 @@
                 </div>
             </section>
             <section class="page" id="page2">
-                <h2 class="page_tit page2_tit">사업영역</h2>
+                <h2 class="page_tit page2_tit">CEO</h2>
                 <div class="page_wrap">
-                    <p class="page_comment">인성정보는 지능형 클라우드 인프라 기술과<br>
-                        비즈니스 특성에 최적화된 솔루션의 통합 제공으로<br>
-                        고객의 비즈니스 성과 극대화와 디지털 전환을 돕는 것을<br>
-                        목표로 하고 있습니다.</p>
+                    <p class="page_comment">인성정보는 1992년 설립 이래 IBM 메인프레임 터미널 에뮬레이터 개발로 시작하여 클라이언트-서버, 분산컴퓨팅과 인터넷 환경을 거쳐 가상화 기반의 클라우드와 인공지능, 빅데이터 시대에 이르기까지, IT 환경 변화에 따른 핵심 인프라 솔루션 및 서비스를 공급하는 IT 전문회사로서 네트워크, 컴퓨팅, 스토리지 및 협업과 컨택센터 등 기업 IT인프라 전반에 대한 차별화된 경험과 기술역량으로 고객 비즈니스의 디지털 전환을 위한 동반자 역할을 해오고 있습니다.<br><br>
+
+​
+또한, 관계사를 통해서는 IT와 의료산업을 접목한 스마트 헬스케어 분야의 선두주자로 국내를 넘어 글로벌 시장의 리더로 발돋움하기 위한 노력도 활발히 전개하고 있습니다. IT 전문기업으로 적당함과 타협하지 않는 프로페셔널리즘을 추구하고, 기업과 사회의 발전을 함께 이끄는 핵심인재를 육성하며, 무엇보다 고객과 함께하는 미래성장을 위한 가치 창출을 가장 중시하는 것. 오늘의 인성정보를 있게 한 경영 원칙이자 더 나은 내일의 인성정보를 기약하는 고객과의 약속들입니다.
                 </div>
             </section>
             <section class="page" id="page3">
-                <h2 class="page_tit">역량/인프라</h2>
+                <h2 class="page_tit">IR</h2>
                 <div class="page_wrap"></div>
             </section>
             <section class="page" id="page4">
-                <h2 class="page_tit">브랜드</h2>
+                <h2 class="page_tit">사업장위치</h2>
                 <div class="page_wrap"></div>
             </section>
         </div>

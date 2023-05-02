@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%
 	String pid = "";
@@ -105,7 +105,7 @@
 			Class.forName(driver);
 			try {
 				conn = DriverManager.getConnection(url, user, pass);
-				sql = "select * from member order by regdate desc";
+				sql = "select * from member order by id desc";
 				try {
 					pstmt = conn.prepareStatement(sql);
 					rs = pstmt.executeQuery();	
@@ -122,12 +122,12 @@
 								<td><%=i %></td>
 								<td><%=kid %></td>
 								<td>
-									<a href='<%=path %>/admin/memberDetail.jsp?id=<%=kid %>'><%=rs.getString("name") %></a>
+									<a href="<%=path %>/admin/memberDetail.jsp?id=<%=kid %>"><%=rs.getString("name") %></a>
 								</td>
 								<td><%=rs.getString("tel") %></td>
 								<td>
 									<% if(!kid.equals("admin")) { %>
-									<a href='<%=path %>/admin/member_del.jsp?id=<%=kid %>' class="btn btn-primary">직권 탈퇴</a>
+									<a href="<%=path %>/admin/member_del.jsp?id=<%=kid %>" class="btn btn-primary">직권 탈퇴</a>
 									<% } %>
 								</td>
 							</tr>
@@ -157,10 +157,10 @@
 				System.out.println("SQL 전송 실패");
 			}
 		} catch(SQLException e){
-			System.out.println("데이터베이스 연결 실패~!");
+			System.out.println("데이터베이스 연결 실패");
 		}
 	} catch(ClassNotFoundException e){
-		System.out.println("드라이버 로딩 실패~!");
+		System.out.println("드라이버 로딩 실패");
 	}
 %>
 				</div>

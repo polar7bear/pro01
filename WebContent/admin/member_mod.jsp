@@ -134,7 +134,7 @@
 								<tr>
 									<th><label for="id" class="lb">아이디</label></th>
 									<td>
-										<input type="text" name="id" id="id" class="indata" value="<%=wid %>" readonly">
+										<input type="text" name="id" id="id" class="indata" value="<%=wid %>" readonly>
 									</td>
 								</tr>
 								<tr>

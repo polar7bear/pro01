@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%
 	String path = request.getContextPath();
@@ -145,8 +145,7 @@
 								<th>주소</th><td><%=address %></td>
 							</tr>
 							<tr>
-								<td colspan="2">
-									<a href="member_mod.jsp?id=<%=wid %>" class="btn btn-primary">정보 수정</a> &nbsp; &nbsp; &nbsp; &nbsp;
+								<td colspan="1">
 									<a href="member_del.jsp?id=<%=wid %>" class="btn btn-cancle">회원탈퇴</a>
 								</td>
 							</tr>
